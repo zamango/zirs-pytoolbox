@@ -32,5 +32,8 @@ if folders:
 # Example: Use RecentFileFinder
 recent_file = RecentFileFinder.recentmfile(root_path, Path("subfolder/savefile.dat"))
 if recent_file:
-    print(f"Most recent file: {recent_file}") ```
+    print(f"Most recent file: {recent_file}")
+```
+
+##### Warning! These code snippets have been pulled from my projects. Not all of them have been tested as a standalone classes. Just inside of projects, therefore they may not function.
 
