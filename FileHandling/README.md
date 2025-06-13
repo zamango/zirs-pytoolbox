@@ -23,6 +23,7 @@
 
 ## Usage - How to use the classes in this module:
 
+```python
 # Example: Use DirectoryUtils for VersionFinder
 root_path = Path("C:/Game/Saves")
 latest_version_folder = DirectoryUtils.dirintlatest(root_path)
@@ -40,5 +41,6 @@ if folders:
 recent_file = DirectoryUtils.recentmfile(root_path, Path("subfolder/savefile.dat"))
 if recent_file:
     print(f"Most recent file: {recent_file}")
+```
 
 ##### Warning! These code snippets have been pulled from my projects. Not all of them have been tested as a standalone classes. Just inside of projects, therefore they may not function.
