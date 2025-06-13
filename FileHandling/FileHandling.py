@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 from typing import Optional, Pattern
 
-class VersionFinder:
+class DirectoryUtils:
     # Lists the latest version of a directory in a given path based off folder name, not timestamps.
     @staticmethod
     def dirintlatest(root_dir: Path, version_pattern: Optional[Pattern] = None) -> Optional[Path]:
@@ -31,7 +31,6 @@ class VersionFinder:
         latest_version, latest_dir = max(version_dirs, key=lambda x: x[0])
         return latest_dir
 
-class FolderLister:
     # Lists all child directories in a given path
     @staticmethod
     def list_folders(sav_root: Path) -> Optional[Path]:
@@ -47,16 +46,13 @@ class FolderLister:
             return None
         return candidates
 
-class RecentFileFinder:
     ''' 
     Finds the most recently modified file within the child directories of a given path.
-
     - Looks inside each immediate subdirectory of `fileroot`
-    - For each subdirectory, it checks the file located at `desendpath` (relative to each subdirectory)
+    - For each subdirectory, it checks the file located at `descendpath` (relative to each subdirectory)
     - Returns the full path to the most recently modified file, or None if no valid files are found
     '''
     @staticmethod
-
     def recentmfile(fileroot: Path, descendpath: Optional[Path] = None) -> Optional[Path]:
         autosaves = []
         datemod = []
@@ -85,5 +81,6 @@ class RecentFileFinder:
         latest_mod, latest_file = max(datemod, key=lambda x: x[0])
         recentplayattpath = latest_file / descendpath if descendpath else latest_file
         return recentplayattpath
+
 
 
