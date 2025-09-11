@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a python module that contains classes I've pulled from my projects. They handle file operations like reading and writing to files, and other file-related tasks.
+This is a python module that contains classes I've pulled from my projects. They handle file operations like reading and writing to files, and other file-related tasks. The code is repurposed so it might come with extra fluff.
 
 ## Classes in this module
 
